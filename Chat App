@@ -773,32 +773,32 @@ public void onCancelled(@NonNull DatabaseError databaseError) {
 
 # Manifest File
 
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-package=&quot;com.example.demochatapp&quot;&gt;
-&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
-&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.demochatapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MessageActivity"></activity>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+    </application>
+</manifest>
 
-&lt;application
-android:allowBackup=&quot;true&quot;
-android:icon=&quot;@mipmap/ic_launcher&quot;
-android:label=&quot;@string/app_name&quot;
-android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
-android:supportsRtl=&quot;true&quot;
-android:theme=&quot;@style/AppTheme&quot;&gt;
-&lt;activity android:name=&quot;.MessageActivity&quot;&gt;&lt;/activity&gt;
-&lt;activity android:name=&quot;.ResetPasswordActivity&quot; /&gt;
-&lt;activity android:name=&quot;.RegisterActivity&quot; /&gt;
-&lt;activity android:name=&quot;.LoginActivity&quot; /&gt;
-&lt;activity android:name=&quot;.StartActivity&quot;&gt;
-&lt;intent-filter&gt;
-&lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
-&lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
-&lt;/intent-filter&gt;
-&lt;/activity&gt;
-&lt;activity android:name=&quot;.MainActivity&quot;&gt;&lt;/activity&gt;
-&lt;/application&gt;
-&lt;/manifest&gt;
 
 #MessageAdapter.java
 
